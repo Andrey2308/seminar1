@@ -1,15 +1,12 @@
 ﻿//Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
+int number = 99;
 
-public partial class Program
+while (number < 100 || number >=1000)
 {
-    private static void Main(string[] args)
-    {
-        Console.Clear();
-        Console.WriteLine("Задача 10 ");
-        Console.Write("Введи трёхзначное число: ");
-        int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
-        string stringNumber = Convert.ToString(threeDigitNumber);
-        Console.WriteLine("вторая цифра этого числа -> " + stringNumber[1]);
-    }
+    Console.WriteLine("Введите трехзначное число: ");
+    number = int.Parse(Console.ReadLine());
 }
+int a = number / 10;
+int b = number / 100;
+Console.WriteLine("Вторая цифра в этом числе это " + (a - b*10));
